@@ -12,6 +12,9 @@ import Transactions from './pages/Transactions';
 import TransactionDetails from './pages/TransactionDetails';
 import Profile from './pages/Profile';
 import AdminDashboard from './pages/AdminDashboard';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
 
 export default function App() {
   const { user } = useAuth();
@@ -19,6 +22,9 @@ export default function App() {
     <Routes>
       <Route path="/login" element={user ? <Navigate to="/dashboard" replace /> : <Login />} />
       <Route path="/register" element={user ? <Navigate to="/dashboard" replace /> : <Register />} />
+      <Route path="/" element={user ? <Navigate to="/dashboard" replace /> : <Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
       <Route element={<ProtectedRoute />}>
         <Route element={<Layout />}>
           <Route path="/dashboard" element={<Dashboard />} />
