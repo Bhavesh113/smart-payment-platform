@@ -1,0 +1,20 @@
+# secrets
+.env
+*.pem
+*.key
+
+# build output
+backend/target/
+frontend/dist/
+frontend/node_modules/
+*.log
+
+# IDE / OS
+.idea/
+.vscode/
+*.iml
+.project
+.classpath
+.settings/
+.DS_Store
+Thumbs.db
