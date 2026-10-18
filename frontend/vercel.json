@@ -1,0 +1,9 @@
+
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://smartpay-backend-0m3k.onrender.com/api/:path*"
+    }
+  ]
+}
